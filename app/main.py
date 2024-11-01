@@ -40,11 +40,9 @@ def shop_trip() -> None:
         if price_all_butters == int(price_all_butters):
             price_all_butters = int(price_all_butters)
         total = price_all_breads + price_all_milks + price_all_butters
-        print(f"Date: "
-              f"{datetime(2021, 1, 4, 12, 33, 41).strftime(
-                  "%d/%m/%Y %H:%M:%S"
-              )}"
-              f"\nThanks, {customer.name}, for your purchase!"
+        date = datetime(2021, 1, 4, 12, 33, 41).strftime("%d/%m/%Y %H:%M:%S")
+        print(f"Date: {date}")
+        print(f"Thanks, {customer.name}, for your purchase!"
               "\nYou have bought:"
               f"\n{customer.milk} milks for {price_all_milks} dollars"
               f"\n{customer.bread} breads for {price_all_breads} dollars"
