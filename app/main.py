@@ -25,7 +25,7 @@ def shop_trip() -> None:
         else:
             print(f"{customer.name} doesn't have enough money "
                   f"to make a purchase in any shop")
-            return
+            continue
         price_all_milks = (cheeper_shop[min_cost].price_milk * customer.milk)
         if price_all_milks == int(price_all_milks):
             price_all_milks = int(price_all_milks)
@@ -41,8 +41,9 @@ def shop_trip() -> None:
             price_all_butters = int(price_all_butters)
         total = price_all_breads + price_all_milks + price_all_butters
         print(f"Date: "
-              f"{datetime(2021, 1, 4, 12, 33, 41)
-                  .strftime("%d/%m/%Y %H:%M:%S")}"
+              f"{datetime(2021, 1, 4, 12, 33, 41).strftime(
+                  "%d/%m/%Y %H:%M:%S"
+              )}"
               f"\nThanks, {customer.name}, for your purchase!"
               "\nYou have bought:"
               f"\n{customer.milk} milks for {price_all_milks} dollars"
